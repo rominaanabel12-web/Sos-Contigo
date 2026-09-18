@@ -1,6 +1,6 @@
 {
   "name": "sos-contigo-movil",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -17,7 +17,7 @@
     "db:remote": "wrangler d1 migrations apply sos-contigo --remote --cwd server",
     "android:sync": "npm run build && cap sync android",
     "android:open": "cap open android",
-    "test": "node scripts/test-mobile.mjs && node server/scripts/test-care.mjs && node scripts/test-play-billing.mjs",
+    "test": "node scripts/test-mobile.mjs && node server/scripts/test-care.mjs && node scripts/test-play-billing.mjs && node scripts/test-contacts.mjs && node scripts/test-invitations.mjs && node scripts/test-platform.mjs",
     "doctor": "node scripts/doctor.mjs",
     "api:types": "tsc --noEmit -p server/tsconfig.json"
   },

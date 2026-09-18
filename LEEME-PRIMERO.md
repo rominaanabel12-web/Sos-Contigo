@@ -1,61 +1,62 @@
-# SOS Contigo · Google Play · versión 2.0
+# SOS Contigo · versión 3.0.0
 
-Código completo del proyecto React/Vite + Capacitor Android, con API privada, Google Play Billing y doce sonidos originales. Esta versión retira las rutas y pantallas de compra de Hotmart.
+Seguridad, familia, alertas y organización cotidiana. Actualización del proyecto React/Vite + Capacitor Android, según el documento funcional de 40 apartados.
 
-**Se entrega código desarrollado y verificado localmente. No se entrega una APK/AAB compilada o firmada, ni una aplicación publicada.** Faltan tus cuentas, configuración de servicios, compilación Android, pruebas de dispositivos/compras y preparación comercial.
+**Esta entrega contiene código fuente y una demostración funcional. No es una APK/AAB firmada ni una app publicada.** Los usuarios reales, avisos entre teléfonos, almacenamiento remoto y compras necesitan configurar los servicios propios y probar Android en dispositivos. No se modificó automáticamente tu repositorio de GitHub.
 
-## Empezá por aquí
+## Actualizar tu proyecto
 
-1. Abrí `PASO-A-PASO-GOOGLE-IA-STUDIO.md`.
-2. Importá el repositorio en Google AI Studio y usá `PROMPT-PARA-AI-STUDIO.md`.
-3. Conectá Firebase y la API siguiendo `docs/01-INSTALACION.md`.
-4. Configurá Google Play siguiendo `docs/03-COBROS-Y-CREDENCIALES.md`.
-5. Probá avisos, sonidos, permisos y compras con `docs/04-PRUEBAS-Y-LIMITES.md`.
+Si ya tenés SOS Contigo, empezá por `ACTUALIZAR-A-3.0.0.md`. Subí el contenido de las carpetas del ZIP de actualización a la raíz de tu repositorio; no subas el ZIP. Conservá tus variables y secretos privados. La actualización de la interfaz no despliega el servidor.
 
-## Funciones incluidas
+Para usar Google AI Studio, importá/sincronizá el repositorio y pegá `PROMPT-PARA-AI-STUDIO.md`.
 
-| Área | Código incluido |
+## Lo que incluye
+
+| Área | Funciones desarrolladas |
 |---|---|
-| Clientes | Registro, correo verificado, ingreso, recuperación, cierre de sesión y foto de perfil. |
-| Diseño | Logo SOS Contigo, interfaz adaptable a teléfono/tableta, color personal y panel de empresa. |
-| Círculos | Invitaciones, límites de integrantes, eliminar integrantes y salir del círculo. |
-| Seguridad | SOS con confirmación, prevención, Estoy bien, trayectos con hora prevista, avisos por falta de confirmación. |
-| Ubicación | Posición puntual con permiso, antigüedad visible y mapa con consentimiento. |
-| Registros | Descripciones y audio de hasta dos minutos; privado, compartido ahora o al emitir SOS; permiso a círculo o contacto para notas. Fotos con permiso elegido al guardar. |
-| Vida diaria | Agua, agenda, recordatorios aproximados, chequeo diario y pedidos de compañía, llamada o recogida. |
-| Avisos | Cola persistente, reintentos, recepción por FCM y apertura diferenciadas; nueve categorías Android con sonido propio. |
-| Sonidos | Doce WAV originales: nueve avisos y tres confirmaciones de interfaz opcionales. Escucha y prueba local desde Mi teléfono. |
-| Planes | US$ 4.99 / 9.99 / 19.99 de referencia, 2 / 6 / 30 personas, prueba de siete días sin tarjeta; compra, restauración y gestión Google Play. |
-| Empresa | Consultas privadas, respuestas de administradora, correo y enlaces sociales editables. |
-| Cuenta | Solicitud de eliminación desde app o web; registro idempotente y revisión manual de administradora. El borrado completo requiere gestión operativa. |
+| Inicio | Accesos SOS / Contigo / Mis Alertas; próximas tareas, familiares, prueba y cuenta. |
+| SOS | Doble toque, cinco segundos cancelables, modo silencioso en el emisor, protocolo por contacto, prioridades, permisos, historial y confirmación de lectura. |
+| Contigo | Familia, códigos de invitación, contactos de confianza con consentimiento y QR, estados, check-in, acompañamiento y temporizador con escalamiento voluntario. |
+| Ubicación | Sesiones temporales, destinatarios elegidos, pausa al ocultar la app y retirada al finalizar. Sin seguimiento permanente. |
+| Evidencias | Audio y texto; fotografías; videos privados o ligados a un incidente, descargas, retirada de acceso y conservación definida. |
+| Mis Alertas | Recordatorios, vencimientos, turnos, cumpleaños, hábitos y tareas; recurrencias y días elegidos; múltiples avisos; tareas compartidas con «Lo hago yo»; insistencia hasta HECHO. |
+| Organización cotidiana | Perfiles de viajes, vehículo y mascotas; creación de recordatorios desde fechas; flujo de accidente; resúmenes del día y pendientes para mañana. |
+| Voz y lugar | Dictado si el navegador lo permite, borrador que debe confirmarse; avisos por llegada con ubicación mientras la sección está visible. |
+| Bóveda | Documentos cifrados localmente con AES-GCM, frase de acceso, bloqueo automático, copia cifrada y restauración. |
+| Mi cuenta | Foto, tema, permisos, sonidos, consulta de suscripción, gestión/cancelación en Google Play, consultas y solicitud de eliminación. |
+| Organizaciones | Panel separado; usuarios y roles; licencias activadas por operador; incidentes, responsables, estados, auditoría y reporte CSV. |
 
-No hay billetera que custodie dinero, despacho de policía, localización continua, grabación oculta ni identificación automática de un atacante. Los accesos Android abren una confirmación. Las alertas dependen de conexión, permisos, batería y disponibilidad de los servicios.
+Se conserva la agenda de teléfonos, la bitácora, el agua, el soporte y las funciones anteriores. Los datos viejos no se migran ni borran silenciosamente: la agenda familiar anterior permanece en su pantalla; Mis Alertas utiliza registros nuevos.
 
-## Arquitectura de esta entrega
+## Planes actualizados
 
-- Google AI Studio: edición y vista previa del proyecto existente.
-- React/Vite: interfaz; Capacitor y código Java: aplicación Android.
-- Firebase Authentication: cuentas; Firebase Cloud Messaging: transporte de avisos.
-- Cloudflare Worker: API; D1: datos; R2 privado: fotos y audios. No se guardan estos archivos en Google Play.
-- Google Play Billing: cobro de suscripciones; el servidor consulta Android Publisher y confirma el comprobante antes de habilitar el plan.
+- Premium Individual: una persona; **USD 3,99/mes de referencia**.
+- Familiar: **USD 7,99/mes de referencia**; cupo inicial configurable de seis integrantes, pendiente de definición comercial antes del lanzamiento.
+- Institucional: propuesta para 25 / 100 / 500 / Enterprise; precio a cotizar, sin checkout ficticio.
+- Cuenta nueva verificada: **siete días de Premium completo** (hasta seis integrantes durante la prueba), sin tarjeta ni cobro automático. No se reinicia al reinstalar, invitar o cancelar.
 
-La API actual utiliza servicios Cloudflare; el runtime Node de la vista previa AI Studio no la reemplaza. Para usarla de verdad, desplegá la API y configurá su URL. Este proyecto no usa la API de Gemini para sus funciones.
+Los precios finales los definís en Play Console. La compra muestra el precio real y condiciones de Google Play. El catálogo antiguo se conserva únicamente para verificar/restaurar suscriptores anteriores; no se cambia su precio unilateralmente. Payoneer no se configura en el código: la cuenta receptora debe ser aceptada por el perfil de pagos de Google.
 
-## Inicio local
+## Ejecución y comprobaciones
 
 ```bash
 npm ci
 npm run dev
-```
-
-Sin Firebase configurado aparece el acceso a la demostración. La demostración tiene datos ficticios; no envía SOS ni cobra.
-
-```bash
 npm test
+npm run build
 npm run api:types
 npm run api:check
 npm run android:sync
-npm run android:open
 ```
 
-Los detalles y el estado de verificación están en `ENTREGA.json`. No hay secretos, cuenta de cobro, dominio ni firma configurados. No publiques el enlace de este ZIP como si fuera la app para clientes.
+La demo funciona sin credenciales, usa datos ficticios y no envía avisos ni cobra. Sus cambios quedan en la sesión, salvo la bóveda de demostración que se almacena cifrada en el dispositivo.
+
+`ENTREGA.json` registra las verificaciones realizadas y pendientes. La correspondencia con cada apartado del documento está en `docs/09-ALCANCE-3.0.md`.
+
+## Servicios y límites reales
+
+Firebase Authentication/FCM, Cloudflare Worker/D1/R2, Google Play Billing y Android Publisher. El proyecto no depende de Hotmart. AI Studio sirve para editar y previsualizar; su servidor Node no reemplaza la API Cloudflare. No usa Gemini para interpretar libremente recordatorios.
+
+Las notificaciones requieren permisos, conectividad y servicios operativos; Android puede retrasarlas. No se garantiza recepción ni respuesta policial. No hay cámara oculta, reconocimiento de atacantes, billetera que custodie dinero, interceptación del botón de encendido, seguimiento en segundo plano ni biometría implementada en esta versión. Los accesos rápidos de Android abren una confirmación visible.
+
+Leé `docs/01-INSTALACION.md`, `docs/03-COBROS-Y-CREDENCIALES.md` y `docs/10-OPERACION-3.0.md` para configurar y operar el servicio.

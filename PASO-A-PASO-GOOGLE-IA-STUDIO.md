@@ -1,6 +1,10 @@
+> Versión actual: **3.0.0**. Si ya tenés la app, empezá por `ACTUALIZAR-A-3.0.0.md`. Los planes actuales están en `docs/03-COBROS-Y-CREDENCIALES.md`.
+
 # Paso a paso · SOS Contigo en Google AI Studio y Play Store
 
 Este ZIP contiene los archivos de código, la carpeta Android, los sonidos y las instrucciones. Conservá una copia antes de editar. No tenés que volver a pedir que la IA invente toda la aplicación.
+
+Si ya tenés la versión 2.0 en GitHub, usá primero `ACTUALIZAR-A-2.1.md`.
 
 ## 1. Descargar y extraer
 
@@ -25,7 +29,7 @@ AI Studio también ofrece proyectos Android nativos Kotlin/Compose. Elegir esa o
 
 ## 4. Revisar el diseño y los sonidos
 
-Entrá en la demostración. Podés explorar Inicio, Mi círculo, Actividad, Ayuda, Planes, Consultas y Ajustes. Al final de la pantalla, abrí **Escuchar los sonidos de SOS Contigo**. Cada botón Escuchar reproduce un WAV real.
+Entrá en la demostración. Podés explorar Inicio, Mi círculo, Actividad, Ayuda, Planes, Consultas y Ajustes. En el inicio, abrí **Sonidos**; también tenés un acceso al final de la pantalla. Cada botón Escuchar reproduce un WAV real.
 
 Con una cuenta real: **Ajustes → Avisos y funciones del teléfono → Sonidos**. En Android aparece también Probar aviso y Ajustes Android. Probar aviso solo crea una notificación de prueba en ese teléfono; no avisa a tu círculo.
 
