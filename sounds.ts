@@ -8,9 +8,11 @@ export function stopSound(){if(playing){playing.pause();playing.currentTime=0;pl
 export function microphoneActive(active:boolean){micActive=active;if(active)stopSound()}
 export function feedbackEnabled(){try{return localStorage.getItem('sos:interaction-sounds')==='on'}catch{return false}}
 export function setFeedbackEnabled(on:boolean){try{localStorage.setItem('sos:interaction-sounds',on?'on':'off')}catch{}if(!on)stopSound()}
+export function previewVolume(){try{const value=localStorage.getItem('sos:preview-volume');const n=value===null ? 0.45 : Number(value);return Number.isFinite(n)?Math.max(.05,Math.min(1,n)):.45}catch{return .45}}
+export function setPreviewVolume(value:number){try{localStorage.setItem('sos:preview-volume',String(Math.max(.05,Math.min(1,value))))}catch{}if(playing)playing.volume=previewVolume()}
 export async function previewSound(kind:SoundKind){
  if(micActive)throw Error('Detené la grabación antes de probar un sonido.');
- stopSound();playing=new Audio('/sounds/'+soundProfile(kind).file);playing.volume=.55;
+ stopSound();playing=new Audio('/sounds/'+soundProfile(kind).file);playing.volume=previewVolume();
  try{await playing.play()}catch{stopSound();throw Error('El navegador no pudo reproducir audio. Tocá nuevamente Escuchar.')}
 }
 export function feedbackSound(kind:SoundKind){
