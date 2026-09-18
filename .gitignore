@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.worker-build/
+.wrangler/
+.sites-runtime/
+.env
+.env.local
+server/.dev.vars
+android/.gradle/
+android/**/build/
+android/local.properties
+android/app/google-services.json
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+*.jks
+*.keystore
+service-account*.json

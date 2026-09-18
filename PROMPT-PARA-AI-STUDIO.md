@@ -1,0 +1,11 @@
+Trabajá sobre este repositorio SOS Contigo 2.0 ya desarrollado. Conservá React 19, Vite, Capacitor 8, la carpeta Android, Firebase Authentication/FCM y la API Cloudflare Worker/D1/R2. Importá los archivos existentes y ejecutá npm ci y npm run dev. No reemplaces la aplicación por una maqueta ni migres a Kotlin/Compose.
+
+El canal de venta elegido es Google Play Store. El proyecto contiene PlayBillingPlugin.java con Billing Library 9.1.0, comprobación de compras por servidor, RTDN firmado, restauración y acceso a cancelar en Google Play. No integres Hotmart ni checkout externo. No actives un plan a partir de un mensaje del cliente: debe verificarse en server/lib/play-server.ts.
+
+Conservá los planes esencial/familia/comunidad de 2/6/30 integrantes y referencias US$ 4.99/9.99/19.99 mensuales. El precio mostrado para comprar debe venir de Google Play. La prueba es de siete días sin tarjeta ni renovación automática; el usuario compra explícitamente al finalizar o cancelarla.
+
+Preservá SOS, prevención, Estoy bien, trayectos, ubicación con permiso, notas y audios privados/ahora/al SOS, fotos con permiso, agua, agenda, chequeo diario, consultas, foto de perfil, colores, empresa y solicitud de eliminación de cuenta. Los doce sonidos están en public/sounds y android/app/src/main/res/raw; las nueve categorías de notificación están en shared/notification-sounds.ts. No dupliques la reproducción de una notificación Android ni ignores sus ajustes de silencio.
+
+La API requiere despliegue propio. No intentes ejecutar un Worker de Cloudflare como un servidor Node convencional. Para previsualizar la demostración no hacen falta credenciales. Para datos reales usá VITE_API_BASE_URL y configuración pública de Firebase. Nunca pongas claves de servicio, tokens de compra, contraseñas ni claves de firma en src, VITE_*, prompts o repositorio.
+
+Antes de proponer cambios leé LEEME-PRIMERO.md y docs/04-PRUEBAS-Y-LIMITES.md. Verificá npm test, npm run build, npm run api:types y npm run api:check. Si tocás el cliente, ejecutá npm run android:sync antes de compilar Android. Conservá archivos Java y recursos manuales. No afirmes que una APK/AAB fue generada, firmada, publicada o probada en dispositivos si no ejecutaste esos pasos y comprobaste su resultado.

@@ -1,0 +1,9 @@
+{
+  "name": "SOS Contigo",
+  "description": "Círculos de confianza, seguridad y cuidado diario.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}

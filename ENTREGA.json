@@ -1,0 +1,23 @@
+{
+  "project": "SOS Contigo",
+  "version": "2.0.0",
+  "date": "2026-09-16",
+  "distribution": "Google Play",
+  "billing": "Google Play Billing 9.1.0 + Android Publisher + authenticated RTDN",
+  "sound_files": 12,
+  "android_notification_channels": 9,
+  "verification": {
+    "assertions": 350,
+    "web_build": true,
+    "server_types": true,
+    "worker_dry_run": true,
+    "capacitor_sync": true,
+    "android_gradle_build": false,
+    "device_tests": false,
+    "real_payment_test": false
+  },
+  "configured_services": false,
+  "signed_apk_or_aab": false,
+  "published": false,
+  "account_deletion": "request workflow implemented; complete data deletion requires operator processing"
+}
